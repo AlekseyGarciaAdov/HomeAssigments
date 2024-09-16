@@ -1,2 +1,5 @@
 myprog:
 	g++ main.cpp hello.cpp -o myprog
+clean:
+	rm -f *o myprog
+
