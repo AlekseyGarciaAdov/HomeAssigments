@@ -3,6 +3,9 @@
 
 using namespace std;
 
-int main() {
-	cout<<"Hello, World!"<<endl;
+extern string hi;
+
+void hello() {
+	hi = "Hello, World!";
+	cout << hi;
 }
