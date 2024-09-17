@@ -1,5 +1,15 @@
-myprog:
-	g++ main.cpp hello.cpp -o myprog
+CC=g++
+
+CFLAGS=-C -Wall
+
+all: makefile
+
+makefile: main.o h.o
+	$(CC) main.cpp hello.cpp -o makefile
+main.o: main.cpp hello.cpp
+	$(CC) $(CFLAGS) main.cpp hello.cpp
+h.o: h.cpp
+	$(CC) $(CFLAGS) h.cpp
 clean:
-	rm -f *o myprog
+	rm -f *.o makefile
 
