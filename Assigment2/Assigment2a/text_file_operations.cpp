@@ -1,4 +1,4 @@
-
+/* Garcia Adov Aleksey    st135738@student.spbu.ru     "Assigment2a"*/
 
 #include "text_file_operations.h"
 #include <fstream>
