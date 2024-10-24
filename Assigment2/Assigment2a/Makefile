@@ -1,22 +1,13 @@
 CXX = g++
+CXXFLAGS = -c
 
-CXXFLAGS = -Wall -Wextra -std=c++11
-
-TARGET = program
-
-SRCS = main.cpp text_file_operations.cpp rpn_calculator.cpp
-
-OBJS = $(SRCS:.cpp=.o)
-
-all: $(TARGET)
-
-$(TARGET): $(OBJS)
-  $(CXX) $(CXXFLAGS) -o $@ $^
-
-%.o: %.cpp
-  $(CXX) $(CXXFLAGS) -c $< -o $@
-
+myprog: main.o text_file_operations.o
+	$(CC) main.cpp text_file_operations.cpp -o myprog
+main.o: main.cpp
+	$(CC) $(CXXFLAGS) main.cpp
+text_file_operations.o: text_file_operations.cpp rpn_calculator.h
+	$(CC) $(CXXFLAGS) text_file_operations.cpp rpn_calculator.h
 clean:
-  rm -f $(OBJS) $(TARGET)
-
-.PHONY: all clean
+	rm -rf *.o myprog
+run:
+	./myprog

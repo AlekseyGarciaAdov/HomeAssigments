@@ -1,9 +1,6 @@
-CC=g++
-CFLAGS=-c
-
 myprog: main.o
-	$(CC) main.cpp
+	g++ main.cpp -o myprog
 main.o: main.cpp
-	$(CC) $(CFLAGS) main.cpp
+	g++ -c main.cpp
 clean:
 	rm -rf *.o myprog

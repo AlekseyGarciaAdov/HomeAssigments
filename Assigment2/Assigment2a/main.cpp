@@ -1,7 +1,7 @@
 /* Garcia Adov Aleksey    st135738@student.spbu.ru     "Assigment2a"*/
 
 #include <iostream>
-#include "text_file_operations.h"
+//#include "text_file_operations.h"
 #include "rpn_calculator.h"
 
 int main() {
