@@ -1,19 +1,26 @@
-#ifndef AUTOBOT_H
-#define AUTOBOT_H
 
-#include "Transformer.h"
+#ifndef AUTOBOT_HPP
+#define AUTOBOT_HPP
 
-class Autobot : public Transformer {
-public:
-    Autobot(const std::string& name, int power, int speed, const std::string& vehicleType);
-    
-    std::string Transform() const override;
+#include "transformer.hpp"
 
-    std::string GetVehicleType() const;
-    void SetVehicleType(const std::string& vehicleType);
-
+class Autobot: public Transformer { //heir 
 private:
-    std::string vehicleType_;
+	int repairPower;//field
+public:
+	Autobot(int lvl,int str,int fl,int am,Weapon* wpn,int repair); //constructor
+	
+	// functions
+	void repair();
+	void transform() override;// redifine from class Transformer
 };
-
 #endif
+
+
+
+
+
+
+
+
+

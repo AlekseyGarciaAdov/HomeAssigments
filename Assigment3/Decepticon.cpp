@@ -1,18 +1,22 @@
 
-
 #include "Decepticon.h"
+#include <iostream>
 
-Decepticon::Decepticon(const std::string& name, int power, int speed, bool stealthMode)
-    : Transformer(name, power, speed), stealthMode_(stealthMode) {}
-
-std::string Decepticon::Transform() const {
-    return "Transforming into Decepticon mode!";
+Decepticon::Decepticon(int lvl, int str, int fl, int am , Weapon* wpn, bool fly) 
+	: Transformer(lvl, str, fl, am, wpn), canFly(fly) {}
+    
+bool Decepticon::getCanFly() const{
+     return canFly;
 }
 
-bool Decepticon::IsStealthMode() const {
-    return stealthMode_;
+void Decepticon::setCanFly(bool fly){
+     canFly = fly;
 }
 
-void Decepticon::SetStealthMode(bool stealthMode) {
-    stealthMode_ = stealthMode;
+void Decepticon::sabotage(){
+    std::cout << "Sabotaging autobots" << '\n';
+}
+
+void Decepticon::transform(){
+   std::cout<< "Decepticon is transforming" << '\n';
 }

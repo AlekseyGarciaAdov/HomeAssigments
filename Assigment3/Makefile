@@ -1,19 +1,20 @@
-CC=g++
-CFLAGS=-c
+all: runTests
 
-transform: main.o
-	$(CC) main.cpp Autobot.cpp Decepticon.cpp VehicleTransformer.cpp Transformer.cpp -o transform
-main.o: main.cpp Autobot.cpp Decepticon.cpp VehicleTransformer.cpp Transformer.cpp
-	$(CC) $(CFLAGS) main.cpp Autobot.cpp Decepticon.cpp VehicleTransformer.cpp Transformer.cpp
+runTests: test-transformers.o transformer.o Weapon.o Autobot.o Decepticon.o Predatorcon.o 
+	g++ test-transformers.cpp transformer.cpp Weapon.cpp Autobot.cpp Decepticon.cpp Predatorcon.cpp -lgtest -lpthread  -o runTests
+
+test-transformers.o: test-transformers.cpp
+	g++ -c test-transformers.cpp
+transformer.o:  transformer.cpp
+	g++ -c transformer.cpp
+Weapon.o: Weapon.cpp
+	g++ -c Weapon.cpp
 Autobot.o: Autobot.cpp
-	$(CC) $(CFLAGS) Autobot.cpp
-Deception.o: Deception.cpp
-	$(CC) $(CFLAGS) Deception.cpp
-VehicleTransformer.o: VehicleTransformer.cpp
-	$(CC) $(CFLAGS) VehicleTransformer.cpp
-Transformer.o: Transformer.cpp
-	$(CC) $(CFLAGS) Transformer.cpp
+	g++ -c Autobot.cpp
+Decepticon.o: Decepticon.cpp
+	g++ -c Decepticon.cpp
+Predatorcon.o : Predatorcon.cpp
+	g++ -c Predatorcon.cpp
+
 clean:
-	rm -rf *.o transform
-run:
-	./transform
+	rm -rf *.o runTests

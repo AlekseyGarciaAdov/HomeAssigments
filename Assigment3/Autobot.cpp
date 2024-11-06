@@ -1,18 +1,25 @@
 
-
 #include "Autobot.h"
+#include <iostream>
 
-Autobot::Autobot(const std::string& name, int power, int speed, const std::string& vehicleType)
-    : Transformer(name, power, speed), vehicleType_(vehicleType) {}
+Autobot::Autobot(int lvl,int str,int fl,int am, Weapon* wpn,int repair) 
+	: Transformer(lvl,str,fl,am,wpn),repairPower(repair){}
 
-std::string Autobot::Transform() const {
-    return "Transforming into Autobot vehicle!";
+void Autobot::repair(){
+	std::cout << "Repairing with power: " << repairPower << '\n';
 }
 
-std::string Autobot::GetVehicleType() const {
-    return vehicleType_;
+void Autobot::transform(){
+	std::cout<< "Autobot is trnasforming" << '\n';
 }
 
-void Autobot::SetVehicleType(const std::string& vehicleType) {
-    vehicleType_ = vehicleType;
-}
+
+
+
+
+
+
+
+
+
+

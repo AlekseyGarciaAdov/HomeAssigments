@@ -1,19 +1,21 @@
-#ifndef DECEPTICON_H
-#define DECEPTICON_H
 
-#include "Transformer.h"
+#ifndef DECEPTICON_HPP
+#define DECEPTICON_HPP
 
-class Decepticon : public Transformer {
-public:
-    Decepticon(const std::string& name, int power, int speed, bool stealthMode);
-    
-    std::string Transform() const override;
+#include "transformer.hpp"
 
-    bool IsStealthMode() const;
-    void SetStealthMode(bool stealthMode);
-
+class Decepticon : public Transformer { //heir
 private:
-    bool stealthMode_;
+    bool canFly;
+public:
+    Decepticon(int lvl, int str, int fl, int am, Weapon* wpn, bool fly);
+
+      bool getCanFly() const;
+      void setCanFly(bool fly);
+      
+      void sabotage();
+      void transform() override;// redefine from class Transformer
 };
 
 #endif
+
