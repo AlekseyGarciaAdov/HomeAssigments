@@ -1,4 +1,4 @@
-
+/* Garcia Adov Aleksey    st135738@student.spbu.ru     "Assigment4"*/
 #ifndef WEAPON_H
 #define WEAPON_H
 #include <iostream>

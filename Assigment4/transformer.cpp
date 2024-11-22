@@ -1,4 +1,4 @@
-
+/* Garcia Adov Aleksey    st135738@student.spbu.ru     "Assigment4"*/
 #include "transformer.h"
 #include "Weapon.h"
 

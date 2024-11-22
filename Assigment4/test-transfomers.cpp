@@ -1,4 +1,4 @@
-
+/* Garcia Adov Aleksey    st135738@student.spbu.ru     "Assigment4"*/
 
 #include <gtest/gtest.h>
 #include "Autobot.h"

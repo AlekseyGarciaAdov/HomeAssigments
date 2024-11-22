@@ -1,4 +1,4 @@
-
+/* Garcia Adov Aleksey    st135738@student.spbu.ru     "Assigment4"*/
 #ifndef DECEPTICON_H
 #define DECEPTICON_H
 #include "transformer.h"

@@ -1,4 +1,4 @@
-
+/* Garcia Adov Aleksey    st135738@student.spbu.ru     "Assigment4"*/
 #ifndef AUTOBOT_H
 #define AUTOBOT_H
 #include "transformer.h"

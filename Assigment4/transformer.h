@@ -1,4 +1,4 @@
-
+/* Garcia Adov Aleksey    st135738@student.spbu.ru     "Assigment4"*/
 #ifndef TRANSFORMER_H
 #define TRANSFORMER_H
 #include "FuelTank.h"

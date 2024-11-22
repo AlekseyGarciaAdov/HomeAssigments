@@ -1,4 +1,4 @@
-
+/* Garcia Adov Aleksey    st135738@student.spbu.ru     "Assigment4"*/
 #ifndef PREDACON_H
 #define PREDACON_H
 #include "transformer.h"

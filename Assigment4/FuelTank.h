@@ -1,4 +1,4 @@
-
+/* Garcia Adov Aleksey    st135738@student.spbu.ru     "Assigment4"*/
 #ifndef FUELTANK_H
 #define FUELTANK_H
 #include <iostream>

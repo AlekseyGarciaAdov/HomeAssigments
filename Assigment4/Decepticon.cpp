@@ -1,4 +1,4 @@
-
+/* Garcia Adov Aleksey    st135738@student.spbu.ru     "Assigment4"*/
 #include "Decepticon.h"
 #include <iostream>
 Decepticon::Decepticon(int lvl, int str, int am, int fuelCapacity, Weapon* wpn, bool fly)

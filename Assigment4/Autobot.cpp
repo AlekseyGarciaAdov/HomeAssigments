@@ -1,4 +1,4 @@
-
+/* Garcia Adov Aleksey    st135738@student.spbu.ru     "Assigment4"*/
 #include "Autobot.h"
 #include <iostream>
 Autobot::Autobot(int lvl, int str, int am, int fuelCapacity, Weapon* wpn, int repair)

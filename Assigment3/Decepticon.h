@@ -1,4 +1,4 @@
-
+/* Garcia Adov Aleksey    st135738@student.spbu.ru     "Assigment3"*/
 #ifndef DECEPTICON_HPP
 #define DECEPTICON_HPP
 

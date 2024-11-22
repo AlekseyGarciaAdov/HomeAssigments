@@ -1,4 +1,4 @@
-
+/* Garcia Adov Aleksey    st135738@student.spbu.ru     "Assigment4"*/
 #include "Predacon.h"
 #include <iostream>
 Predacon::Predacon(int lvl, int str, int am, int fuelCapacity, Weapon* wpn, int en)
