@@ -1,25 +1,25 @@
-/* Garcia Adov Aleksey    st135738@student.spbu.ru     "Assigment3"*/
 #include "Autobot.h"
 #include <iostream>
 
-Autobot::Autobot(int lvl,int str,int fl,int am, Weapon* wpn,int repair) 
-	: Transformer(lvl,str,fl,am,wpn),repairPower(repair){}
+Autobot::Autobot(const std::string& name, int strength, int speed, const Weapon& weapon, const Engine& engine, int courage, int honor)
+    : Transformer(name, strength, speed, weapon, engine), courage(courage), honor(honor) {}
 
-void Autobot::repair(){
-	std::cout << "Repairing with power: " << repairPower << '\n';
+int Autobot::getCourage() const {
+    return courage;
 }
 
-void Autobot::transform(){
-	std::cout<< "Autobot is trnasforming" << '\n';
+void Autobot::setCourage(int courage) {
+    this->courage = courage;
 }
 
+int Autobot::getHonor() const {
+    return honor;
+}
 
+void Autobot::setHonor(int honor) {
+    this->honor = honor;
+}
 
-
-
-
-
-
-
-
-
+void Autobot::protect() {
+    std::cout << name << " is protecting the innocent!" << std::endl;
+}

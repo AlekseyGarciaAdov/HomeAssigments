@@ -1,21 +1,19 @@
-/* Garcia Adov Aleksey    st135738@student.spbu.ru     "Assigment3"*/
-#ifndef DECEPTICON_HPP
-#define DECEPTICON_HPP
+#ifndef DECEPTICON_H
+#define DECEPTICON_H
 
-#include "transformer.hpp"
+#include "Transformer.h"
 
-class Decepticon : public Transformer { //heir
-private:
-    bool canFly;
+class Decepticon : public Transformer {
 public:
-    Decepticon(int lvl, int str, int fl, int am, Weapon* wpn, bool fly);
-
-      bool getCanFly() const;
-      void setCanFly(bool fly);
-      
-      void sabotage();
-      void transform() override;// redefine from class Transformer
+    Decepticon(const std::string& name, int strength, int speed, const Weapon& weapon, const Engine& engine, int cunning, int malice);
+    int getCunning() const;
+    void setCunning(int cunning);
+    int getMalice() const;
+    void setMalice(int malice);
+    void deceive();
+private:
+    int cunning;
+    int malice;
 };
 
-#endif
-
+#endif // DECEPTICON_H

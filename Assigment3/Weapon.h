@@ -1,13 +1,16 @@
-/* Garcia Adov Aleksey    st135738@student.spbu.ru     "Assigment3"*/
-#ifndef WEAPON_HPP
-#define WEAPON_HPP
+#ifndef WEAPON_H
+#define WEAPON_H
+
+#include <string>
 
 class Weapon {
-private:
-    	int damage; //field
 public:
-     	Weapon(int dmg);//Construktor
-     	
-     	int getDamage() const;//method
+    Weapon(const std::string& name);
+    std::string getName() const;
+    void setName(const std::string& name);
+
+private:
+    std::string name;
 };
-#endif
+
+#endif // WEAPON_H

@@ -1,9 +1,11 @@
-/* Garcia Adov Aleksey    st135738@student.spbu.ru     "Assigment3"*/
-
 #include "Weapon.h"
 
-Weapon::Weapon(int dmg) : damage(dmg){}
+Weapon::Weapon(const std::string& name) : name(name) {}
 
-int Weapon::getDamage() const {
-    return damage;
+std::string Weapon::getName() const {
+    return name;
+}
+
+void Weapon::setName(const std::string& name) {
+    this->name = name;
 }

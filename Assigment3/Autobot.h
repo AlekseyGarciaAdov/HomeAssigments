@@ -1,26 +1,19 @@
-/* Garcia Adov Aleksey    st135738@student.spbu.ru     "Assigment3"*/
-#ifndef AUTOBOT_HPP
-#define AUTOBOT_HPP
+#ifndef AUTOBOT_H
+#define AUTOBOT_H
 
-#include "transformer.hpp"
+#include "Transformer.h"
 
-class Autobot: public Transformer { //heir 
-private:
-	int repairPower;//field
+class Autobot : public Transformer {
 public:
-	Autobot(int lvl,int str,int fl,int am,Weapon* wpn,int repair); //constructor
-	
-	// functions
-	void repair();
-	void transform() override;// redifine from class Transformer
+    Autobot(const std::string& name, int strength, int speed, const Weapon& weapon, const Engine& engine, int courage, int honor);
+    int getCourage() const;
+    void setCourage(int courage);
+    int getHonor() const;
+    void setHonor(int honor);
+    void protect();
+private:
+    int courage;
+    int honor;
 };
-#endif
 
-
-
-
-
-
-
-
-
+#endif // AUTOBOT_H

@@ -1,28 +1,25 @@
-/* Garcia Adov Aleksey    st135738@student.spbu.ru     "Assigment4"*/
 #include "Autobot.h"
 #include <iostream>
-Autobot::Autobot(int lvl, int str, int am, int fuelCapacity, Weapon* wpn, int repair)
-   : Transformer(lvl, str, am, fuelCapacity, wpn), repairPower(repair) {}
-void Autobot::repair() {
-   std::cout << "Repairing with power: " << repairPower << '\n';
+
+Autobot::Autobot(const std::string& name, int strength, int speed, const Weapon& weapon, const Engine& engine, int courage, int honor)
+    : Transformer(name, strength, speed, weapon, engine), courage(courage), honor(honor) {}
+
+int Autobot::getCourage() const {
+    return courage;
 }
-void Autobot::transform() {
-   std::cout << "Autobot is transforming" << '\n';
+
+void Autobot::setCourage(int courage) {
+    this->courage = courage;
 }
-std::ostream& operator<<(std::ostream& os, const Autobot& autobot) {
-   os << static_cast<const Transformer&>(autobot) << ", Repair Power: " << autobot.repairPower;
-   return os;
+
+int Autobot::getHonor() const {
+    return honor;
 }
-bool Autobot::operator>(const Autobot& other) const { return repairPower > other.repairPower; }
-bool Autobot::operator<(const Autobot& other) const { return repairPower < other.repairPower; }
-bool Autobot::operator==(const Autobot& other) const { return repairPower == other.repairPower; }
 
+void Autobot::setHonor(int honor) {
+    this->honor = honor;
+}
 
-
-
-
-
-
-
-
-
+void Autobot::protect() {
+    std::cout << name << " is protecting the innocent!" << std::endl;
+}

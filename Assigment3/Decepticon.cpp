@@ -1,22 +1,25 @@
-/* Garcia Adov Aleksey    st135738@student.spbu.ru     "Assigment3"*/
 #include "Decepticon.h"
 #include <iostream>
 
-Decepticon::Decepticon(int lvl, int str, int fl, int am , Weapon* wpn, bool fly) 
-	: Transformer(lvl, str, fl, am, wpn), canFly(fly) {}
-    
-bool Decepticon::getCanFly() const{
-     return canFly;
+Decepticon::Decepticon(const std::string& name, int strength, int speed, const Weapon& weapon, const Engine& engine, int cunning, int malice)
+    : Transformer(name, strength, speed, weapon, engine), cunning(cunning), malice(malice) {}
+
+int Decepticon::getCunning() const {
+    return cunning;
 }
 
-void Decepticon::setCanFly(bool fly){
-     canFly = fly;
+void Decepticon::setCunning(int cunning) {
+    this->cunning = cunning;
 }
 
-void Decepticon::sabotage(){
-    std::cout << "Sabotaging autobots" << '\n';
+int Decepticon::getMalice() const {
+    return malice;
 }
 
-void Decepticon::transform(){
-   std::cout<< "Decepticon is transforming" << '\n';
+void Decepticon::setMalice(int malice) {
+    this->malice = malice;
+}
+
+void Decepticon::deceive() {
+    std::cout << name << " is deceiving the enemy!" << std::endl;
 }

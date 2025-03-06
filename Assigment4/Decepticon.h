@@ -1,16 +1,19 @@
-/* Garcia Adov Aleksey    st135738@student.spbu.ru     "Assigment4"*/
 #ifndef DECEPTICON_H
 #define DECEPTICON_H
-#include "transformer.h"
+
+#include "Transformer.h"
+
 class Decepticon : public Transformer {
-private:
-   bool canFly;
 public:
-   Decepticon(int lvl = 1, int str = 10, int am = 5, int fuelCapacity = 100, Weapon* wpn = nullptr, bool fly = false);
-   bool getCanFly() const;
-   void setCanFly(bool fly);
-   void sabotage();
-   void transform() override;
-   friend std::ostream& operator<<(std::ostream& os, const Decepticon& decepticon);
+    Decepticon(const std::string& name, int strength, int speed, const Weapon& weapon, const Engine& engine, int cunning, int malice);
+    int getCunning() const;
+    void setCunning(int cunning);
+    int getMalice() const;
+    void setMalice(int malice);
+    void deceive();
+private:
+    int cunning;
+    int malice;
 };
-#endif
+
+#endif // DECEPTICON_H
