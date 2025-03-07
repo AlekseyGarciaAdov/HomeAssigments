@@ -6,5 +6,5 @@ myprog: main.o
 	./myprog
 main.o: main.cpp
 	$(CC) -c main.cpp
-clear:
+clean:
 	rm -rf *.o myprog
