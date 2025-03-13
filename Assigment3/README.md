@@ -1,4 +1,4 @@
-###Assigment 3
+###Assigment 4
 
 ##Author 
 Aleksey Garcia Adov
@@ -10,3 +10,4 @@ st135738@student.spbu.ru
 
 Use the comand "make" for running project.
 Use the command "make clean" for cleaning .o files.
+Use the comand "make tests" for running tests.

@@ -3,10 +3,12 @@
 
 #include "Weapon.h"
 #include "Engine.h"
+#include <iostream>
 
 class Transformer {
 public:
     Transformer(const std::string& name, int strength, int speed, const Weapon& weapon, const Engine& engine);
+    Transformer(const std::string& name); // Перегрузка конструктора
     ~Transformer();
 
     std::string getName() const;
@@ -26,6 +28,12 @@ public:
 
     virtual void transform();
     virtual void attack();
+
+    // Операторы сравнения
+    bool operator>(const Transformer& other) const; // Оператор "сильнее"
+    bool operator<(const Transformer& other) const; // Оператор "слабее"
+
+    friend std::ostream& operator<<(std::ostream& os, const Transformer& transformer);
 
 protected:
     std::string name;

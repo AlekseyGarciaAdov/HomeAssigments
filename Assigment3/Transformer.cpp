@@ -4,6 +4,9 @@
 Transformer::Transformer(const std::string& name, int strength, int speed, const Weapon& weapon, const Engine& engine)
     : name(name), strength(strength), speed(speed), weapon(weapon), engine(new Engine(engine)) {}
 
+Transformer::Transformer(const std::string& name)
+    : name(name), strength(0), speed(0), weapon("Default Weapon"), engine(new Engine("Default Engine")) {}
+
 Transformer::~Transformer() {
     delete engine;
 }
@@ -54,4 +57,18 @@ void Transformer::transform() {
 
 void Transformer::attack() {
     std::cout << name << " is attacking with " << weapon.getName() << "!" << std::endl;
+}
+
+bool Transformer::operator>(const Transformer& other) const {
+    return this->strength > other.strength;
+}
+
+bool Transformer::operator<(const Transformer& other) const {
+    return this->strength < other.strength;
+}
+
+std::ostream& operator<<(std::ostream& os, const Transformer& transformer) {
+    os << "Transformer: " << transformer.name << ", Strength: " << transformer.strength
+       << ", Speed: " << transformer.speed;
+    return os;
 }

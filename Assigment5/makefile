@@ -1,10 +1,10 @@
 CC=g++
-CFLAGS=-o
+CFLAGS=-c
 
 myprog: main.o
-	$(CC) main.cpp $(CFLAGS) myprog
+	$(CC) main.cpp -o myprog
 	./myprog
 main.o: main.cpp
-	$(CC) -c main.cpp
+	$(CC) $(CFLAGS) main.cpp
 clean:
 	rm -rf *.o myprog
